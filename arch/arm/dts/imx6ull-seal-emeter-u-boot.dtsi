@@ -1,0 +1,41 @@
+// SPDX-License-Identifier: GPL-2.0+
+/*
+ * Copyright (c) 2026 SEAL AG
+ */
+
+/ {
+	bootmeths {
+		rauc {
+			compatible = "u-boot,distro-rauc";
+		};
+	};
+
+	binman: binman {
+		filename = "flash.bin";
+		pad-byte = <0x00>;
+
+		spl: blob-ext@1 {
+			offset = <0x0>;
+			filename = "SPL";
+		};
+
+		uboot: blob-ext@2 {
+			offset = <0x11000>;
+			filename = "u-boot.img";
+		};
+	};
+};
+
+&pinctrl_uart5 {
+	bootph-all;
+};
+
+&uart5 {
+	bootph-pre-ram;
+	bootph-all;
+};
+
+&usdhc2 {
+	bootph-pre-ram;
+	bootph-all;
+};

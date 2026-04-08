@@ -1,0 +1,15 @@
+if TARGET_EMETER
+
+config SYS_BOARD
+	default "emeter"
+
+config SYS_VENDOR
+	default "seal"
+
+config SYS_CONFIG_NAME
+	default "emeter"
+
+config IMX_CONFIG
+	default "board/seal/emeter/imximage.cfg"
+
+endif

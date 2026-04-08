@@ -211,6 +211,17 @@ config TARGET_EMBESTMX6BOARDS
 	select BOARD_LATE_INIT
 	select SUPPORT_SPL
 
+config TARGET_EMETER
+	bool "SEAL EMETER board"
+	depends on MX6ULL
+	select DM
+	select DM_GPIO
+	select DM_I2C
+	select DM_SERIAL
+	select DM_THERMAL
+	select MMC
+	select SUPPORT_SPL
+
 config TARGET_GE_BX50V3
 	bool "General Electric Bx50v3"
 	depends on MX6Q
@@ -732,6 +743,7 @@ source "board/softing/vining_2000/Kconfig"
 source "board/liebherr/display5/Kconfig"
 source "board/liebherr/mccmon6/Kconfig"
 source "board/logicpd/imx6/Kconfig"
+source "board/seal/emeter/Kconfig"
 source "board/sielaff/imx6dl-sielaff/Kconfig"
 source "board/solidrun/mx6cuboxi/Kconfig"
 source "board/somlabs/visionsom-6ull/Kconfig"

@@ -1,0 +1,6 @@
+SEAL EMETER BOARD
+M:	Filip Brozovic <fbrozovic@gmail.com>
+S:	Maintained
+F:	board/seal/emeter/
+F:	include/configs/emeter.h
+F:	configs/emeter_defconfig
